@@ -1,0 +1,35 @@
+:root { --bg:#000; --fg:#fff; --muted:#c8c8c8; --accent:#d8b46a; }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:"Noto Sans",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+.wrap{min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px}
+.title{font-size:20px;font-weight:800;margin:0;text-align:center}
+.chest-btn{position:relative;appearance:none;border:none;background:transparent;padding:8px;border-radius:14px;touch-action:manipulation}
+.chest-wrap{position:relative;display:inline-block}
+.chest-img{display:block;width:220px;height:auto;filter:drop-shadow(0 8px 20px rgba(0,0,0,.6))}
+.glow-layer{position:absolute;inset:-12% -10% auto -10%;height:140%;background:radial-gradient(ellipse at 50% 35%, rgba(255,236,180,.85), rgba(255,236,180,.15) 55%, rgba(255,236,180,0) 72%);opacity:0;pointer-events:none;filter:blur(1px)}
+.left{display:block;text-align:center;margin-top:8px;font-weight:600;color:var(--muted)}
+.hint{margin:0;color:#888;font-size:14px}
+
+.spin{animation:spin 600ms cubic-bezier(.3,.7,.2,1) 1}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.lid-open{animation:lidOpen 700ms cubic-bezier(.2,.9,.2,1) forwards}
+@keyframes lidOpen{to{transform:rotateX(75deg)}}
+
+.glow-on{animation:glowUp 800ms ease-out forwards}
+@keyframes glowUp{from{opacity:0}to{opacity:1}}
+
+.modal{position:fixed;inset:0;display:none;align-items:flex-end;background:rgba(0,0,0,.4);backdrop-filter:saturate(1.2) blur(4px);padding:0 0 env(safe-area-inset-bottom)}
+.modal[aria-hidden="false"]{display:flex}
+.modal-sheet{width:100%;max-height:90dvh;background:#fff;border-radius:16px 16px 0 0;box-shadow:0 -12px 30px rgba(0,0,0,.18);display:flex;flex-direction:column;overflow:hidden}
+.card-top{padding:16px 16px 8px}
+.card-text{font-size:20px;font-weight:800;letter-spacing:.5px}
+.action-btn{margin-top:8px;appearance:none;border:1px solid #ddd;background:#111;color:#fff;border-radius:10px;padding:10px 14px;font-weight:600}
+.pdf-wrap{flex:1;min-height:40vh;background:#f7f7f7;border-top:1px solid #eee}
+.pdf-wrap object{width:100%;height:100%}
+.close-btn{appearance:none;border:none;background:#000;color:#fff;padding:12px 16px;margin:10px 12px 12px;border-radius:12px;font-weight:700}
+@media (min-width:600px){
+  .title{font-size:22px}
+  .chest{width:260px;height:208px}
+}
