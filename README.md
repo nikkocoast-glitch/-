@@ -37,4 +37,5 @@
 - 修改文案：index.html 中 .card-text。
 - 动效时长：styles.css 中 @keyframes 和 app.js 的 setTimeout。
 - 颜色尽量保持简洁，已适配移动端触控与独立运行。
+
 - 
