@@ -1,0 +1,21 @@
+{
+  "name": "七夕小互动",
+  "short_name": "七夕",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "点击宝箱 3 次解锁惊喜 - 七夕贺卡小互动",
+  "icons": [
+    {
+      "src": "chest_closed.png",
+      "sizes": "826x637",
+      "type": "image/png"
+    },
+    {
+      "src": "chest_open_glow.png",
+      "sizes": "518x497",
+      "type": "image/png"
+    }
+  ]
+}
