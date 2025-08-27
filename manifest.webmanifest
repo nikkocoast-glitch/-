@@ -1,11 +1,11 @@
 {
-  "name": "七夕小互动",
-  "short_name": "七夕",
+  "name": "宝宝，七夕节快乐！",
+  "short_name": "七夕快乐！",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
-  "description": "点击宝箱 3 次解锁惊喜 - 七夕贺卡小互动",
+  "description": "点击宝箱 3 次即可解锁惊喜！",
   "icons": [
     {
       "src": "chest_closed.png",
@@ -17,5 +17,6 @@
       "sizes": "518x497",
       "type": "image/png"
     }
-  ]
+  ],
+  "id": "https://nikkocoast-glitch.github.io/-/"
 }
