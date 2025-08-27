@@ -1,28 +1,36 @@
 {
-  "name": "宝宝，七夕节快乐！",
-  "short_name": "七夕快乐！",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "id": "https://nikkocoast-glitch.github.io/-/",
+  "name": "七夕快乐！",
+  "short_name": "七夕惊喜",
   "description": "点击宝箱 3 次即可解锁惊喜！",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay"],
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "chest_closed.png",
-      "sizes": "826x637",
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "chest_open_glow.png",
-      "sizes": "518x497",
-      "type": "image/png"
-    },
-
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
     {
-      "src": "TTM1kmKY9U.png",
-      "sizes": "800×572",
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
-  "id": "https://nikkocoast-glitch.github.io/-/"
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  }
 }
