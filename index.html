@@ -1,57 +1,47 @@
+<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" href="data:," />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>七夕小互动</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script type="importmap">
-  {
-    "imports": {}
-  }
-  </script>
+
+  <!-- PWA 清单（确保仓库根目录有 manifest.webmanifest） -->
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <!-- 图标（可选，浏览器使用） -->
+  <link rel="icon" href="/icons/icon-192.png" sizes="192x192" type="image/png">
+
+  <!-- 引用你的样式（如果路径不一样请改成实际文件名） -->
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- 防止缓存问题（可选） -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
 </head>
-    <script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js")
-    .then(() => console.log("Service Worker registered"))
-    .catch(err => console.error("SW registration failed:", err));
-}
-    </script>
 <body>
-  <main class="wrap">
-    <h1 class="title" aria-live="polite">点击宝箱 3 次解锁惊喜</h1>
-
-    <button id="chestBtn" class="chest-btn" aria-label="点击宝箱" aria-live="polite">
-      <div class="chest-wrap">
-        <img id="chestImg" src="chest_closed.png" alt="宝箱" class="chest-img" width="220" height="176" />
-        <div id="glowLayer" class="glow-layer" aria-hidden="true"></div>
-      </div>
-      <span id="left" class="left">还剩 3 圈</span>
-    </button>
-
-    <p class="hint">轻点宝箱，每次都会转一圈</p>
-
-    <!-- 贺卡弹层 -->
-    <div id="cardModal" class="modal" aria-hidden="true" role="dialog" aria-label="七夕贺卡">
-      <div class="modal-sheet">
-        <div class="card-top">
-          <div class="card-text">宝宝，七夕节快乐！</div>
-          <button id="openPdf" class="action-btn">打开PDF贺卡</button>
-        </div>
-        <div class="pdf-wrap">
-          <object id="pdfObject" data="qixi_card.pdf#view=FitH" type="application/pdf">
-            <p>无法内嵌显示PDF。你可以点击上面的“打开PDF贺卡”。</p>
-          </object>
-        </div>
-        <button id="closeModal" class="close-btn" aria-label="关闭">关闭</button>
-      </div>
-    </div>
+  <!-- 你的页面主体（这里放原来 index.html 的主要内容或保留最小占位） -->
+  <main>
+    <h1>七夕小互动</h1>
+    <p>点击宝箱 3 次解锁惊喜！</p>
+    <!-- 如果你有原来的 HTML 内容，把它粘回这里。 -->
   </main>
 
-  <script src="app.js" type="module"></script>
+  <!-- 引用你的主脚本（如果文件名是 app.js 或其他，按实际改） -->
+  <script src="/app.js" defer></script>
+
+  <!-- Service Worker 注册（先尝试 /service-worker.js，失败再尝试 /sw.js） -->
+  <script>
+    (function(){
+      if (!('serviceWorker' in navigator)) return;
+      // 尝试先注册 /service-worker.js；若失败则尝试 /sw.js（兼容你可能已有的 sw 文件名）
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker registered at /service-worker.js', reg))
+        .catch(err1 => {
+          console.warn('Register /service-worker.js failed, trying /sw.js', err1);
+          navigator.serviceWorker.register('/sw.js')
+            .then(reg => console.log('Service Worker registered at /sw.js', reg))
+            .catch(err2 => console.error('Service Worker registration failed for both:', err2));
+        });
+    })();
+  </script>
 </body>
 </html>
