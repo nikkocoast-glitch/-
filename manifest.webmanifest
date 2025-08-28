@@ -1,12 +1,14 @@
 {
-  "id": "https://nikkocoast-glitch.github.io/-/",
+  "id": "https://nikkocoast-glitch.github.io/your-repo-name/",
   "name": "七夕惊喜",
   "short_name": "七夕惊喜",
   "description": "点击宝箱 3 次即可解锁惊喜！",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["window-controls-overlay"],
+  "display_override": [
+    "window-controls-overlay"
+  ],
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "orientation": "portrait",
