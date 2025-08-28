@@ -1,5 +1,5 @@
 {
-  "id": "https://nikkocoast-glitch.github.io/-/",
+  "id": "https://nikkocoast-glitch.github.io/your-repo-name/",
   "name": "七夕惊喜",
   "short_name": "七夕惊喜",
   "description": "点击宝箱 3 次即可解锁惊喜！",
@@ -9,35 +9,33 @@
   "background_color": "#ffffff",
   "theme_color": "#ffffff",
   "orientation": "portrait",
-  "launch_handler": {
-    "client_mode": "focus-existing"
-  },
+  "launch_handler": {"client_mode": "focus-existing"},
   "icons": [
-  {
-    "src": "icons/icon-192.png",
-    "sizes": "192x192",
-    "type": "image/png",
-    "purpose": "any"
-  },
-  {
-    "src": "icons/icon-512.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "any"
-  },
-  {
-    "src": "icons/icon-192.png",
-    "sizes": "192x192",
-    "type": "image/png",
-    "purpose": "maskable"
-  },
-  {
-    "src": "icons/icon-512.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "maskable"
-  }
-],
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
   "screenshots": [
     {
       "src": "icons/icon-512.png",
