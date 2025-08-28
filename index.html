@@ -14,6 +14,13 @@
   }
   </script>
 </head>
+    <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/service-worker.js")
+    .then(() => console.log("Service Worker registered"))
+    .catch(err => console.error("SW registration failed:", err));
+}
+    </script>
 <body>
   <main class="wrap">
     <h1 class="title" aria-live="polite">点击宝箱 3 次解锁惊喜</h1>
@@ -46,12 +53,5 @@
   </main>
 
   <script src="app.js" type="module"></script>
-  <script>
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("/service-worker.js")
-    .then(() => console.log("Service Worker registered"))
-    .catch(err => console.error("SW registration failed:", err));
-}
-</script>
 </body>
 </html>
